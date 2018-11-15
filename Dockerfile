@@ -4,5 +4,5 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -v -o app
 
 FROM scratch
-COPY /go/src/github.com/shaxiangyu/simple-app-1/app .
+COPY /go/src/github.com/shaxiangyu/simple-app-1/app.go .
 ENTRYPOINT ["/app"]
